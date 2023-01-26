@@ -281,10 +281,15 @@ body {
   display: inline-block;
 }
 
+.weather-location-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .weather-location-country {
   font-size: 1rem;
-  padding-left: 5px;
-  margin-bottom: 8px;
+  padding-left: 0.3125rem;
+  margin-bottom: 0.5rem;
 }
 
 .weather-location-city {
@@ -304,7 +309,7 @@ body {
 
 .weather-country {
   font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .weather-location svg {
@@ -347,6 +352,12 @@ body {
   .weather-data-element[data-type="weather-code"]
   .weather-data-element-icon {
   width: 24%;
+}
+
+.weather-data-container[data-type="daily"]
+  .weather-data-element[data-type="Temperature"]
+  .weather-data-element-info {
+  max-width: unset;
 }
 
 .weather-data-container[data-type="daily"]
@@ -418,13 +429,13 @@ body {
 }
 
 .weather-data-element-title {
-  font-size: 17px;
-  margin-bottom: 7px;
+  font-size: 1.0625rem;
+  margin-bottom: 0.4375rem;
 }
 
 .weather-data-element[data-type="precipitation"] .weather-data-element-title,
 .weather-data-element[data-type="wind-speed"] .weather-data-element-title {
-  font-size: clamp(0px, 4vw, 17px);
+  font-size: clamp(0px, 4vw, 1.0625rem);
 }
 
 .weather-data-element-value {
@@ -533,7 +544,7 @@ body {
   right: 0px;
   transform: translate(-16%, -50%);
   background-color: #d9d9d9;
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: 150ms ease-in-out transform;
 }
 
@@ -615,8 +626,8 @@ body {
   }
 
   .weather-basis-switch-btn {
-    font-size: 24px;
-    padding: 2px 0px;
+    font-size: 1.5rem;
+    padding: 0.125rem 0px;
   }
 
   .weather-data-container[data-type="current"] {
@@ -662,11 +673,6 @@ body {
     flex: unset;
     align-items: center;
     width: 100%;
-  }
-
-  .weather-data-container[data-type="current"] .weather-data-element-icon {
-    flex: unset;
-    width: 72px;
   }
 
   .weather-data-container[data-type="current"]
