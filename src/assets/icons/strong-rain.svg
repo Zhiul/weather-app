@@ -1,0 +1,12 @@
+<!doctype html>
+<svg viewBox="13.138 64.844 13.356 11.002" width="13.356" height="11.002">
+  <g id="g-3" transform="matrix(0.511815, 0, 0, -0.511717, -60.564896, 227.746338)" style="">
+    <g id="g-4" transform="scale(0.1)">
+      <path d="m 1700.98,3040.85 c 0,-40 -32.5,-72.4 -72.5,-72.4 -40.11,0 -72.5,32.4 -72.5,72.4 0,40.1 72.5,142.6 72.5,142.6 0,0 72.5,-102.5 72.5,-142.6" style="fill:#a1e0f0;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path238"></path>
+      <path d="m 1700.98,3040.85 c 0,-40 -32.5,-72.4 -72.5,-72.4 v 215 c 0,0 72.5,-102.5 72.5,-142.6" style="fill:#ace4f5;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path240"></path>
+      <path d="m 1628.48,2988.45 v 10 c 23.43,0 42.5,19.02 42.5,42.4 h 10 c 0,-28.9 -23.55,-52.4 -52.5,-52.4" style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path242"></path>
+      <path d="m 1511.7,3112.71 c 0,-19.78 -16.07,-35.79 -35.84,-35.79 -19.82,0 -35.83,16.01 -35.83,35.79 0,19.81 35.83,70.48 35.83,70.48 0,0 35.84,-50.67 35.84,-70.48" style="fill:#a1e0f0;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path244"></path>
+      <path d="m 1511.7,3112.71 c 0,-19.78 -16.07,-35.79 -35.84,-35.79 v 106.27 c 0,0 35.84,-50.67 35.84,-70.48" style="fill:#ace4f5;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path246"></path>
+    </g>
+  </g>
+</svg>

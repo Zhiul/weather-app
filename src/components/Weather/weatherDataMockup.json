@@ -1,0 +1,1331 @@
+{
+  "currentData": {
+    "time": "2023-01-26T08:00",
+    "weatherCode": {
+      "value": 2,
+      "description": "Partly cloudy",
+      "unit": "",
+      "icon": ""
+    },
+    "temperature": {
+      "value": "22",
+      "description": "Temperature",
+      "unit": "°C",
+      "icon": ""
+    },
+    "apparentTemperature": {
+      "value": "26",
+      "description": "Feels like",
+      "unit": "°C",
+      "icon": "/src/assets/icons/apparent_temperature.svg"
+    },
+    "humidity": {
+      "value": 88,
+      "description": "Humidity",
+      "unit": "%",
+      "icon": "/src/assets/icons/humidity.svg"
+    },
+    "precipitation": {
+      "value": 0,
+      "description": "Precipitation",
+      "unit": "mm",
+      "icon": "/src/assets/icons/precipitation.svg"
+    },
+    "windSpeed": {
+      "value": "2",
+      "description": "Wind speed",
+      "unit": "mph",
+      "icon": "/src/assets/icons/wind_speed.svg"
+    },
+    "type": "current"
+  },
+  "hourlyData": [
+    {
+      "time": "2023-01-26T09:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "25",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "30",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 77,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "0",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-0"
+    },
+    {
+      "time": "2023-01-26T10:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "27",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "31",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 67,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "1",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-1"
+    },
+    {
+      "time": "2023-01-26T11:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "29",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "32",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 60,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "3",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-2"
+    },
+    {
+      "time": "2023-01-26T12:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "30",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "33",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 56,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "5",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-3"
+    },
+    {
+      "time": "2023-01-26T13:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "30",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "34",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 55,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "7",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-4"
+    },
+    {
+      "time": "2023-01-26T14:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "30",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "34",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 54,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "8",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-5"
+    },
+    {
+      "time": "2023-01-26T15:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "30",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "32",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 56,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "10",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-6"
+    },
+    {
+      "time": "2023-01-26T16:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "29",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "30",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 59,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "12",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-7"
+    },
+    {
+      "time": "2023-01-26T17:00",
+      "weatherCode": {
+        "value": 1,
+        "description": "Mainly clear",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "28",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "29",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 61,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "12",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-8"
+    },
+    {
+      "time": "2023-01-26T18:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "27",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "28",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 65,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "10",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-9"
+    },
+    {
+      "time": "2023-01-26T19:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "26",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "28",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 68,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "7",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-10"
+    },
+    {
+      "time": "2023-01-26T20:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "26",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "28",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 70,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "5",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-11"
+    },
+    {
+      "time": "2023-01-26T21:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "26",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "28",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 71,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "4",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-12"
+    },
+    {
+      "time": "2023-01-26T22:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "25",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "28",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 73,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "3",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-13"
+    },
+    {
+      "time": "2023-01-26T23:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "24",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "28",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 76,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "3",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-14"
+    },
+    {
+      "time": "2023-01-27T00:00",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "24",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "27",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 80,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "2",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-15"
+    },
+    {
+      "time": "2023-01-27T01:00",
+      "weatherCode": {
+        "value": 1,
+        "description": "Mainly clear",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "23",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "27",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 83,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "2",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-16"
+    },
+    {
+      "time": "2023-01-27T02:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "22",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "26",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 86,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "1",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-17"
+    },
+    {
+      "time": "2023-01-27T03:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "22",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "25",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 90,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "1",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-18"
+    },
+    {
+      "time": "2023-01-27T04:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "21",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "25",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 93,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "1",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-19"
+    },
+    {
+      "time": "2023-01-27T05:00",
+      "weatherCode": {
+        "value": 45,
+        "description": "Fog",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "20",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "23",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 96,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "2",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-20"
+    },
+    {
+      "time": "2023-01-27T06:00",
+      "weatherCode": {
+        "value": 45,
+        "description": "Fog",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "19",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "22",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 98,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "2",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-21"
+    },
+    {
+      "time": "2023-01-27T07:00",
+      "weatherCode": {
+        "value": 45,
+        "description": "Fog",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "19",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "22",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 96,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "2",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-22"
+    },
+    {
+      "time": "2023-01-27T08:00",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": "22",
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "25",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": 86,
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "1",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "hourly",
+      "uid": "hourly-23"
+    }
+  ],
+  "dailyData": [
+    {
+      "time": "2023-01-26",
+      "weatherCode": {
+        "value": 45,
+        "description": "Fog",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "20", "max": "30" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "34",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "75",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "12",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-01-26T18:22",
+      "sunrise": "2023-01-26T06:40",
+      "uid": "daily-0"
+    },
+    {
+      "time": "2023-01-27",
+      "weatherCode": {
+        "value": 45,
+        "description": "Fog",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "19", "max": "31" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "34",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "67",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "12",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-01-27T18:22",
+      "sunrise": "2023-01-27T06:40",
+      "uid": "daily-1"
+    },
+    {
+      "time": "2023-01-28",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "17", "max": "32" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "34",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "62",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "13",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-01-28T18:22",
+      "sunrise": "2023-01-28T06:40",
+      "uid": "daily-2"
+    },
+    {
+      "time": "2023-01-29",
+      "weatherCode": {
+        "value": 45,
+        "description": "Fog",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "17", "max": "30" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "33",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "69",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "13",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-01-29T18:23",
+      "sunrise": "2023-01-29T06:40",
+      "uid": "daily-3"
+    },
+    {
+      "time": "2023-01-30",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "19", "max": "31" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "33",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "63",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "13",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-01-30T18:23",
+      "sunrise": "2023-01-30T06:40",
+      "uid": "daily-4"
+    },
+    {
+      "time": "2023-01-31",
+      "weatherCode": {
+        "value": 3,
+        "description": "Overcast",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "19", "max": "31" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "33",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "67",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "12",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-01-31T18:24",
+      "sunrise": "2023-01-31T06:40",
+      "uid": "daily-5"
+    },
+    {
+      "time": "2023-02-01",
+      "weatherCode": {
+        "value": 2,
+        "description": "Partly cloudy",
+        "unit": "",
+        "icon": ""
+      },
+      "temperature": {
+        "value": { "min": "18", "max": "32" },
+        "description": "Temperature",
+        "unit": "°C",
+        "icon": ""
+      },
+      "apparentTemperature": {
+        "value": "35",
+        "description": "Feels like",
+        "unit": "°C",
+        "icon": "/src/assets/icons/apparent_temperature.svg"
+      },
+      "humidity": {
+        "value": "65",
+        "description": "Humidity",
+        "unit": "%",
+        "icon": "/src/assets/icons/humidity.svg"
+      },
+      "precipitation": {
+        "value": 0,
+        "description": "Precipitation",
+        "unit": "mm",
+        "icon": "/src/assets/icons/precipitation.svg"
+      },
+      "windSpeed": {
+        "value": "13",
+        "description": "Wind speed",
+        "unit": "mph",
+        "icon": "/src/assets/icons/wind_speed.svg"
+      },
+      "type": "daily",
+      "sunset": "2023-02-01T18:24",
+      "sunrise": "2023-02-01T06:40",
+      "uid": "daily-6"
+    }
+  ]
+}
