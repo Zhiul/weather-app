@@ -614,6 +614,8 @@ body {
 }
 
 .weather-data-container[data-type=current] {
+  max-width: 1600px;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -1080,6 +1082,11 @@ body {
     opacity: 1;
   }
 }
+.weather-forecast-elements {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
 .weather-forecast-elements[data-animation=appearing] {
   transform-origin: top center;
   animation: forecastAppearing 400ms ease-in-out;
