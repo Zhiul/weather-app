@@ -1,0 +1,48 @@
+@use "../../utils/sr-only.scss";
+
+.weather-data-container[data-type="hourly"] {
+  .weather-data-inner-container {
+    padding: 6px 12px 22px 12px;
+    gap: 0px;
+  }
+
+  .weather-data-elements-container {
+    margin-bottom: 18px;
+  }
+
+  .weather-data-elements-container-2 {
+    grid-template-columns: auto;
+  }
+
+  .weather-meta-info {
+    display: unset;
+  }
+
+  .weather-time {
+    color: white;
+    text-align: center;
+    padding: 0px;
+    font-size: 1.125rem;
+  }
+
+  .weather-data-element {
+    justify-content: flex-start;
+  }
+
+  .weather-data-element-icon {
+    flex: unset;
+    width: 32px;
+  }
+
+  .weather-data-element[data-type="weather-code"] .weather-data-element-icon {
+    width: 59%;
+  }
+
+  .weather-data-element:nth-of-type(odd) {
+    justify-self: unset;
+  }
+
+  .weather-data-element-title {
+    @extend .sr-only;
+  }
+}

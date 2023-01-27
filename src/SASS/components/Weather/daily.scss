@@ -1,0 +1,38 @@
+.weather-data-container[data-type="daily"] {
+  border-radius: 18px;
+
+  .weather-data-inner-container {
+    padding: 12px 12px 22px 12px;
+    gap: 0px;
+  }
+
+  .weather-data-elements-container {
+    margin-bottom: 15px;
+  }
+
+  .weather-time {
+    font-size: 1.125rem;
+    align-self: center;
+  }
+
+  .weather-data-element[data-type="weather-code"] {
+    max-width: unset;
+  }
+
+  .weather-data-element[data-type="weather-code"] .weather-data-element-icon {
+    width: 24%;
+  }
+
+  .weather-data-element[data-type="Temperature"] .weather-data-element-info {
+    max-width: unset;
+  }
+
+  .weather-data-element[data-type="Temperature"]
+    :where(.weather-data-element-value, .separator) {
+    font-size: 2rem;
+  }
+
+  :where([data-type="Temperature"]) .weather-data-element-info {
+    display: flex;
+  }
+}

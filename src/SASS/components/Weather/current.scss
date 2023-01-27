@@ -1,0 +1,152 @@
+.weather-data-container[data-type="current"] {
+  max-width: 1600px;
+  margin: 0 auto;
+  border-radius: unset;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-bottom: 20px;
+
+  .weather-data-inner-container {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+    max-width: 1024px;
+    padding: 12px 12px 40px 12px;
+    border-radius: 13px;
+  }
+
+  .weather-data-elements-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-data-elements-container-2 {
+    align-items: center;
+  }
+
+  .weather-data-element-icon {
+    flex: 1;
+  }
+
+  .weather-data-element-info {
+    flex: 1.6;
+    max-width: 108px;
+  }
+
+  .weather-data-element[data-type="Temperature"] {
+    flex-direction: column;
+    justify-self: center;
+    margin-bottom: 5px;
+    width: 224px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .weather-data-inner-container {
+      display: flex;
+      width: 100%;
+      max-width: 1024px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+      background: hsl(0deg 0% 0% / 63%);
+      backdrop-filter: blur(3px);
+      box-shadow: 0px 0px 12px 3px black, inset 0px 0px 0px 1px black;
+    }
+
+    .weather-meta-info {
+      flex: unset;
+      align-items: center;
+      width: 100%;
+    }
+
+    .weather-location {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .weather-location-state {
+      display: inline-flex;
+    }
+
+    .weather-location-country {
+      padding-left: unset;
+      margin-bottom: unset;
+    }
+
+    :where(.weather-location-city, .weather-location-state) {
+      font-size: 1rem;
+    }
+
+    .weather-location-city::after,
+    .weather-location-state::after {
+      content: ",";
+      display: inline-flex;
+      padding-right: 0.25rem;
+    }
+
+    .weather-location-city {
+      align-items: center;
+      order: 0;
+    }
+
+    .weather-data-element {
+      width: 12rem;
+      padding: 0;
+    }
+
+    .weather-data-element-value {
+      font-size: 2.5rem;
+    }
+
+    .weather-data-element[data-type="weather-code"] .weather-data-element-icon {
+      width: 134px;
+    }
+
+    .weather-data-element[data-type="Temperature"] .weather-data-element-value {
+      font-size: 4rem;
+    }
+
+    .weather-data-element[data-type="Wind speed"] .weather-data-element-value {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.weather-temperature-toggle-button {
+  width: 92px;
+  aspect-ratio: 8 / 3;
+  background-color: rgba(0, 0, 0, 0.78);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &::after {
+    content: "C";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(-16%, -50%);
+    background-color: #d9d9d9;
+    font-size: 1.25rem;
+    transition: 150ms ease-in-out transform;
+  }
+
+  &[data-unit="fahrenheit"]::after {
+    content: "F";
+    transform: translate(-212%, -50%);
+  }
+}

@@ -1,0 +1,243 @@
+.weather-search {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 12px;
+}
+
+.weather-search-button {
+  position: absolute;
+  width: 30px;
+  height: 32px;
+  left: 0px;
+  top: 50%;
+  transform: translate(22px, -50%);
+  color: var(--oldSilver);
+  z-index: 3;
+  padding-bottom: 2px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#weather-search-input {
+  width: 100%;
+  padding: 10px 25px 10px 45px;
+  border-radius: 100px;
+  background: white;
+  box-shadow: 0px 3px 4px 2px rgb(0 0 0 / 30%);
+  position: relative;
+  z-index: 2;
+  outline: none;
+}
+
+#weather-search-input::-webkit-search-cancel-button {
+  width: 33px;
+  height: 33px;
+  background: url("../../src/assets/icons/close.svg");
+  background-size: cover;
+  pointer-events: all;
+  -webkit-appearance: none;
+  transition: opacity 150ms ease-in-out;
+  transform: translate(12px, 0px);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#weather-search-input::placeholder {
+  color: var(--oldSilver);
+  font-weight: 450;
+}
+
+#weather-search-input::-ms-input-placeholder {
+  color: var(--oldSilver);
+  font-weight: 450;
+}
+
+.search-box-container {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease-in-out;
+}
+
+.search-box-container[data-visible="true"] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-box-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #dcdcdc;
+  z-index: 1;
+}
+
+.search-box {
+  opacity: 0;
+  position: absolute;
+  width: calc(100% - 24px);
+  background-color: white;
+  z-index: 3;
+  top: 70px;
+  border-radius: 6px;
+  padding: 12px;
+  transition: 150ms ease-in-out opacity;
+  transform-origin: top center;
+}
+
+.search-box[data-visible="true"] {
+  opacity: 1;
+}
+
+.search-box-location-element {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  position: relative;
+  padding: 5px 0px;
+}
+
+.search-box-location-element::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(212, 212, 212);
+  position: absolute;
+  bottom: 0px;
+}
+
+.search-box-location-element:hover {
+  background: #f1efef;
+}
+
+.search-box-location-element-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #8e8a8a;
+}
+
+.search-box-location-element-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-search {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  padding: 12px;
+}
+
+.weather-search-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 0px;
+  top: 50%;
+  transform: translate(22px, -50%);
+  color: var(--oldSilver);
+  z-index: 3;
+  padding-bottom: 2px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#weather-search-input {
+  width: 100%;
+  padding: 10px 25px 10px 45px;
+  border-radius: 100px;
+  background: white;
+  box-shadow: 0px 3px 4px 2px rgb(0 0 0 / 30%);
+  position: relative;
+  z-index: 2;
+  outline: none;
+}
+
+#weather-search-input::-webkit-search-cancel-button {
+  width: 33px;
+  height: 33px;
+  background: url("../../src/assets/icons/close.svg");
+  background-size: cover;
+  pointer-events: all;
+  -webkit-appearance: none;
+  transition: opacity 150ms ease-in-out;
+  transform: translate(12px, 0px);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#weather-search-input::placeholder {
+  color: var(--oldSilver);
+  font-weight: 450;
+}
+
+#weather-search-input::-ms-input-placeholder {
+  color: var(--oldSilver);
+  font-weight: 450;
+}
+
+.search-box-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #dcdcdc;
+  z-index: 1;
+}
+
+.search-box {
+  opacity: 0;
+  position: absolute;
+  width: calc(100% - 24px);
+  background-color: white;
+  z-index: 3;
+  top: 70px;
+  border-radius: 6px;
+  padding: 12px;
+  transition: 150ms ease-in-out opacity;
+  transform-origin: top center;
+}
+
+.search-box[data-visible="true"] {
+  opacity: 1;
+}
+
+@keyframes searchBoxDisappearing {
+  from {
+    height: var(--previousHeight);
+    transform: scaleY(1);
+  }
+
+  to {
+    height: var(--previousHeight);
+    transform: scaleY(0.5);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .weather-search {
+    max-width: 481px;
+    margin-bottom: 4px;
+  }
+
+  .search-box {
+    max-width: 457px;
+  }
+
+  .search-box-overlay {
+    background: #00000000;
+    backdrop-filter: blur(1px);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  .search-box[data-visible="true"] ~ .search-box-overlay {
+    opacity: 1;
+  }
+}
