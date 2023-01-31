@@ -80,7 +80,7 @@ export const reverseGeocodeLocation = async (
   if (typeof lon === "number") lon = lon.toString();
 
   const reverseGeocodedLocation = await fetch(
-    `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=7145fd9312e95eefabe5a13af2df5b20`
+    `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=7145fd9312e95eefabe5a13af2df5b20`
   );
   const reverseGeocodedLocationData = await reverseGeocodedLocation.json();
 
