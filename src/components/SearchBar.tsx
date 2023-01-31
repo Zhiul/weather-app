@@ -1,87 +1,42 @@
-import {
-  geocodeLocation,
-  reverseGeocodeLocation,
-} from "./Weather/geocodingAPI";
-import { ReactComponent as SearchIcon } from "../assets/icons/search.svg";
-import { ReactComponent as GoBackIcon } from "../assets/icons/arrow.svg";
-import { ReactComponent as LocationIcon } from "../assets/icons/location-outline.svg";
-import { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import _ from "lodash";
 import uuid from "react-uuid";
 
+import { geocodeLocation } from "./Weather/geocodingAPI";
+
+import { FetchingWeatherDataContext, OnlineStatusContext } from "../App";
+import { LocationHistoryContext } from "../App";
+import { preloadImages } from "../hooks/preloadImages";
+
+import { ReactComponent as SearchIcon } from "../assets/icons/search.svg";
+import { ReactComponent as GoBackIcon } from "../assets/icons/arrow.svg";
+import { ReactComponent as LocationIcon } from "../assets/icons/location-outline.svg";
 import noInternetAccessEmptyState from "../assets/no-internet-access.jpg";
+preloadImages(noInternetAccessEmptyState);
 
-function Location({ location, assignLocation }) {
-  return (
-    <li
-      className="search-box-location-element"
-      onClick={() => {
-        assignLocation(location);
-      }}
-    >
-      <span className="search-box-location-element-icon">
-        <LocationIcon />
-      </span>
-      <span className="search-box-location-element-text">
-        {location.cityName},{" "}
-        {location.stateName ? location.stateName + ", " : null}
-        {location.countryName}
-      </span>
-    </li>
-  );
+interface SearchBarProps {
+  currentLocation: LocationData;
+  setLocation: React.Dispatch<React.SetStateAction<LocationData>>;
 }
 
-function SearchBox({ geocodedLocation, assignLocation }) {
-  const searchBox = useRef(null);
-  const searchBoxDropdownVisibility =
-    geocodedLocation.length >= 1 ? "true" : "false";
-  let previusSearchBoxHeight;
-  if (searchBoxDropdownVisibility === "false" && searchBox.current)
-    searchBox.current.style.setProperty(
-      "--previousHeight",
-      `${searchBox.current.offsetHeight}px`
-    );
-
-  return (
-    <div
-      className="search-box"
-      data-visible={searchBoxDropdownVisibility}
-      ref={searchBox}
-    >
-      <ul>
-        {Array.isArray(geocodedLocation) ? (
-          geocodedLocation.map((location) => {
-            return (
-              <Location
-                key={uuid()}
-                location={location}
-                assignLocation={assignLocation}
-              />
-            );
-          })
-        ) : geocodedLocation?.message === "No internet access" ? (
-          <div className="search-box-empty-state">
-            <img src={noInternetAccessEmptyState} alt="" />
-          </div>
-        ) : null}
-      </ul>
-    </div>
-  );
+interface SearchBoxProps {
+  geocodedLocation: LocationData[];
+  assignLocation: assignLocation;
 }
 
-export function SearchBar({ currentLocation, setLocation }) {
-  const [geocodedLocation, setGeocodedLocation] = useState([]);
+interface LocationProps {
+  location: LocationData;
+  assignLocation: assignLocation;
+}
+
+export function SearchBar({ currentLocation, setLocation }: SearchBarProps) {
+  const [geocodedLocation, setGeocodedLocation] = useState<LocationData[]>([]);
   const [searchBoxVisibility, setSearchBoxVisibility] = useState("false");
 
   const desktopResolution = window.matchMedia("(min-width: 769px)");
-
-  useEffect(() => {
-    if (searchBoxVisibility === "false" && geocodedLocation.length >= 1) {
-      setSearchBoxVisibility("true");
-    } else if (desktopResolution.matches && geocodedLocation.length === 0) {
-      setSearchBoxVisibility("false");
-    }
-  }, [geocodedLocation]);
+  const onlineStatus = useContext(OnlineStatusContext);
+  const fetchingWeatherData = useContext(FetchingWeatherDataContext);
+  const locationHistory = useContext(LocationHistoryContext);
 
   useEffect(() => {
     if (desktopResolution.matches && searchBoxVisibility === "true") {
@@ -93,26 +48,31 @@ export function SearchBar({ currentLocation, setLocation }) {
     }
   }, [searchBoxVisibility]);
 
-  function assignLocation(location) {
-    if (_.isEqual(currentLocation, location) === false) {
-      setLocation(location);
+  function enableSearchBoxVisibility() {
+    if (
+      desktopResolution.matches === false ||
+      locationHistory.data.length >= 1 ||
+      geocodedLocation.length >= 1
+    ) {
+      setSearchBoxVisibility("true");
     }
-    disableSearchBoxVisibility();
-  }
-
-  async function getGeocodedLocation(event) {
-    const geocodedLocation = await geocodeLocation(event.target.value);
-    setGeocodedLocation(geocodedLocation);
   }
 
   function disableSearchBoxVisibility() {
     setSearchBoxVisibility("false");
   }
 
-  function enableSearchBoxVisibilityInDesktop() {
-    if (desktopResolution.matches === false || geocodedLocation.length >= 1) {
-      setSearchBoxVisibility("true");
+  async function getGeocodedLocation(locationInput: string) {
+    if (onlineStatus === false) return;
+    const geocodedLocation = await geocodeLocation(locationInput);
+    return geocodedLocation;
+  }
+
+  function assignLocation(location: LocationData) {
+    if (_.isEqual(currentLocation, location) === false) {
+      setLocation(location);
     }
+    disableSearchBoxVisibility();
   }
 
   return (
@@ -122,11 +82,31 @@ export function SearchBar({ currentLocation, setLocation }) {
         type="search"
         placeholder="Search location"
         autoComplete="off"
-        onInput={_.debounce(getGeocodedLocation, 250)}
-        onFocus={enableSearchBoxVisibilityInDesktop}
-        onClick={enableSearchBoxVisibilityInDesktop}
-        onKeyDown={(event) => {
-          if (event.key === "Enter") disableSearchBoxVisibility();
+        onInput={_.debounce(async (event) => {
+          const geocodedLocation = await getGeocodedLocation(
+            (event.target as HTMLInputElement).value
+          );
+          if (geocodedLocation == null) return;
+
+          setGeocodedLocation(geocodedLocation);
+          if (
+            locationHistory.data.length >= 1 ||
+            geocodedLocation.length >= 1
+          ) {
+            setSearchBoxVisibility("true");
+          } else if (desktopResolution.matches) {
+            disableSearchBoxVisibility();
+          }
+        }, 500)}
+        onFocus={enableSearchBoxVisibility}
+        onClick={enableSearchBoxVisibility}
+        onKeyDown={async (event) => {
+          if (event.key === "Enter") {
+            await getGeocodedLocation((event.target as HTMLInputElement).value);
+            if (geocodedLocation[0]) assignLocation(geocodedLocation[0]);
+            (event.target as HTMLInputElement).blur();
+            disableSearchBoxVisibility();
+          }
         }}
       />
       <button className="weather-search-button">
@@ -159,5 +139,84 @@ export function SearchBar({ currentLocation, setLocation }) {
         ></div>
       </div>
     </div>
+  );
+}
+
+function SearchBox({ geocodedLocation, assignLocation }: SearchBoxProps) {
+  const searchBox = useRef<HTMLDivElement>(null);
+  const onlineStatus = useContext(OnlineStatusContext);
+  const locationHistory = useContext(LocationHistoryContext);
+
+  const searchBoxDropdownVisibility =
+    geocodedLocation.length >= 1 ||
+    locationHistory.data.length >= 1 ||
+    onlineStatus === false
+      ? "true"
+      : "false";
+
+  if (searchBoxDropdownVisibility === "false" && searchBox.current)
+    searchBox.current.style.setProperty(
+      "--previousHeight",
+      `${searchBox.current.offsetHeight}px`
+    );
+
+  return (
+    <div
+      className="search-box"
+      data-visible={searchBoxDropdownVisibility}
+      ref={searchBox}
+    >
+      <ul>
+        {onlineStatus === false ? (
+          <div className="search-box-empty-state">
+            <img src={noInternetAccessEmptyState} alt="" />
+            <div className="search-box-empty-state-text">
+              <h3>No internet connection</h3>
+              <p>Please check your internet settings and try again</p>
+            </div>
+          </div>
+        ) : geocodedLocation.length >= 1 ? (
+          geocodedLocation.map((location) => {
+            return (
+              <Location
+                key={uuid()}
+                location={location}
+                assignLocation={assignLocation}
+              />
+            );
+          })
+        ) : locationHistory.data.length >= 1 ? (
+          locationHistory.data.map((location) => {
+            return (
+              <Location
+                key={uuid()}
+                location={location}
+                assignLocation={assignLocation}
+              />
+            );
+          })
+        ) : null}
+      </ul>
+    </div>
+  );
+}
+
+function Location({ location, assignLocation }: LocationProps) {
+  return (
+    <li
+      className="search-box-location-element"
+      onClick={() => {
+        assignLocation(location);
+      }}
+    >
+      <span className="search-box-location-element-icon">
+        <LocationIcon />
+      </span>
+      <span className="search-box-location-element-text">
+        {location.cityName},{" "}
+        {location.stateName ? location.stateName + ", " : null}
+        {location.countryName}
+      </span>
+    </li>
   );
 }

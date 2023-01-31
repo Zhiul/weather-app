@@ -1,12 +1,27 @@
-import { DateTime } from "luxon";
 import { useEffect, useState, useContext } from "react";
 import { FetchingWeatherDataContext } from "../../App";
-import { ReactComponent as LocationIcon } from "../../assets/icons/location.svg";
+
 import { SearchBar } from "../SearchBar";
+import { ReactComponent as LocationIcon } from "../../assets/icons/location.svg";
 import { WeatherDataElement } from "./WeatherElement";
+
 import sunIcon from "../../assets/icons/sun.svg";
 import getWeatherDataAssets from "./getWeatherDataAssets";
 import weatherDataBackgroundPlaceholder from "../../assets/blurred_day.jpg";
+
+import { DateTime } from "luxon";
+
+interface WeatherProps {
+  weatherData: WeatherData<string> | WeatherData<{ min: string; max: string }>;
+  dailyWeatherData: WeatherDailyData[];
+  weatherDataType: "current" | "daily" | "hourly";
+  location?: LocationData;
+  setLocation?: React.Dispatch<React.SetStateAction<LocationData>>;
+  temperatureUnit: "celsius" | "fahrenheit";
+  setTemperatureUnit?: React.Dispatch<
+    React.SetStateAction<"celsius" | "fahrenheit">
+  >;
+}
 
 const Weather = ({
   weatherData,
@@ -16,12 +31,15 @@ const Weather = ({
   setLocation,
   temperatureUnit,
   setTemperatureUnit,
-}) => {
+}: WeatherProps) => {
   const [weatherBackground, setWeatherBackground] = useState("");
   const [weatherIcon, setWeatherIcon] = useState("");
+
   const fetchingWeatherData = useContext(FetchingWeatherDataContext);
 
   useEffect(() => {
+    // Set weather code icon and weather component background
+
     if (fetchingWeatherData) {
       setWeatherBackground("");
       setWeatherIcon(sunIcon);
@@ -38,6 +56,7 @@ const Weather = ({
       setWeatherIcon(weatherDataAssets.weatherCodeIcon);
       return;
     }
+
     const time = DateTime.fromISO(weatherData.time);
     const timeDay = time.startOf("day");
     const today = DateTime.fromISO(dailyWeatherData[0].time).startOf("day");
@@ -56,7 +75,11 @@ const Weather = ({
   }, [weatherData]);
 
   return (
-    <div className="weather-data-container" data-type={weatherDataType}>
+    <div
+      className="weather-data-container"
+      data-type={weatherDataType}
+      data-fetching-weather-data={fetchingWeatherData ? "true" : ""}
+    >
       <div
         className="weather-data-container-bg"
         style={{
@@ -64,6 +87,7 @@ const Weather = ({
           backgroundPosition: "54% 100%",
         }}
       ></div>
+
       <div
         className="weather-data-container-bg-placeholder"
         style={{
@@ -72,50 +96,52 @@ const Weather = ({
         }}
       ></div>
 
-      {weatherDataType === "current" ? (
+      {location && setLocation ? (
         <SearchBar currentLocation={location} setLocation={setLocation} />
       ) : null}
 
       <ul className="weather-data-inner-container">
         <li className="weather-meta-info" key="weather-meta-info">
-          {weatherDataType === "current" ? (
+          {location ? (
             <div className="weather-location">
               <div className="weather-location-city">
                 <span className="weather-location-icon">
                   <LocationIcon />
                 </span>
-                {location?.cityName}
+                <span>{location.cityName}</span>
               </div>
 
-              {location?.stateName ? (
+              {location.stateName ? (
                 <div className="weather-location-state">
-                  {location?.stateName}
+                  <span>{location.stateName}</span>
                 </div>
               ) : null}
 
               <div className="weather-location-country">
-                {location?.countryName}
+                <span>{location.countryName}</span>
               </div>
             </div>
           ) : null}
 
           <div className="weather-time">
-            {fetchingWeatherData
-              ? ""
-              : weatherData.type === "current" &&
-                `Today, ${DateTime.fromISO(weatherData.time).toFormat(
-                  "LLL dd h:mm a"
-                )}`}
+            <span>
+              {fetchingWeatherData
+                ? ""
+                : weatherData.type === "current" &&
+                  `Today, ${DateTime.fromISO(weatherData.time).toFormat(
+                    "LLL dd h:mm a"
+                  )}`}
 
-            {fetchingWeatherData
-              ? ""
-              : weatherData.type === "daily" &&
-                DateTime.fromISO(weatherData.time).toFormat("LLL dd")}
+              {fetchingWeatherData
+                ? ""
+                : weatherData.type === "daily" &&
+                  DateTime.fromISO(weatherData.time).toFormat("LLL dd")}
 
-            {fetchingWeatherData
-              ? ""
-              : weatherDataType === "hourly" &&
-                DateTime.fromISO(weatherData.time).toFormat("h a")}
+              {fetchingWeatherData
+                ? ""
+                : weatherDataType === "hourly" &&
+                  DateTime.fromISO(weatherData.time).toFormat("h a")}
+            </span>
           </div>
         </li>
 
@@ -148,7 +174,6 @@ const Weather = ({
           <WeatherDataElement
             key="temperature"
             weatherDataElement={weatherData.temperature}
-            weatherDataType={weatherData.type}
             temperatureUnit={temperatureUnit}
             setTemperatureUnit={setTemperatureUnit}
           />
@@ -158,20 +183,23 @@ const Weather = ({
           <WeatherDataElement
             key="apparentTemperature"
             weatherDataElement={weatherData.apparentTemperature}
-            weatherDataType={weatherData.type}
             temperatureUnit={temperatureUnit}
-            setTemperatureUnit={setTemperatureUnit}
           />
 
-          {["humidity", "precipitation", "windSpeed"].map((element) => {
-            return (
-              <WeatherDataElement
-                key={element}
-                weatherDataElement={weatherData[element]}
-                weatherDataType={weatherData.type}
-              />
-            );
-          })}
+          <WeatherDataElement
+            key="humidity"
+            weatherDataElement={weatherData["humidity"]}
+          />
+
+          <WeatherDataElement
+            key="precipitation"
+            weatherDataElement={weatherData["precipitation"]}
+          />
+
+          <WeatherDataElement
+            key="windSpeed"
+            weatherDataElement={weatherData["windSpeed"]}
+          />
         </div>
       </ul>
     </div>

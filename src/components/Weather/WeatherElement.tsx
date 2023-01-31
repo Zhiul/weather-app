@@ -1,13 +1,20 @@
-import { useContext } from "react";
-import { FetchingWeatherDataContext } from "../../App";
+interface WeatherDataElementProps {
+  weatherDataElement:
+    | WeatherDataElement<string>
+    | WeatherDataElement<{ min: string; max: string }>;
+  temperatureUnit?: "celsius" | "fahrenheit";
+  setTemperatureUnit?: React.Dispatch<
+    React.SetStateAction<"celsius" | "fahrenheit">
+  >;
+}
 
 const WeatherDataElement = ({
   weatherDataElement,
-  weatherDataType,
   temperatureUnit,
   setTemperatureUnit,
-}) => {
-  const fetchingWeatherData = useContext(FetchingWeatherDataContext);
+}: WeatherDataElementProps) => {
+  const getTemperatureInFahrenheit = (value: string) =>
+    Math.floor((parseInt(value) * 9) / 5 + 32);
   return (
     <li
       className="weather-data-element"
@@ -27,18 +34,26 @@ const WeatherDataElement = ({
           {weatherDataElement.description}
         </div>
 
-        {weatherDataElement.description === "Temperature" &&
-        weatherDataType === "daily" ? (
+        {typeof weatherDataElement.value === "object" ? (
           <>
             <div className="weather-data-element-value">
-              {weatherDataElement.value.max}
+              <span>
+                {" "}
+                {temperatureUnit === "fahrenheit"
+                  ? getTemperatureInFahrenheit(weatherDataElement.value.max)
+                  : weatherDataElement.value.max}
+              </span>
               <span className="weather-data-element-value-unit">
                 {weatherDataElement.unit}
               </span>
             </div>
             <span className="separator">&nbsp;&nbsp;/&nbsp;</span>
             <div className="weather-data-element-value">
-              {weatherDataElement.value.min}
+              <span>
+                {temperatureUnit === "fahrenheit"
+                  ? getTemperatureInFahrenheit(weatherDataElement.value.min)
+                  : weatherDataElement.value.min}
+              </span>
               <span className="weather-data-element-value-unit">
                 {weatherDataElement.unit}
               </span>
@@ -47,10 +62,11 @@ const WeatherDataElement = ({
         ) : (
           <>
             <div className="weather-data-element-value">
-              {temperatureUnit === "fahrenheit"
-                ? Math.floor((weatherDataElement.value * 9) / 5 + 32)
-                : weatherDataElement.value}
-
+              <span>
+                {temperatureUnit === "fahrenheit"
+                  ? getTemperatureInFahrenheit(weatherDataElement.value)
+                  : weatherDataElement.value}
+              </span>
               <span className="weather-data-element-value-unit">
                 {weatherDataElement.description === "Precipitation" ||
                 weatherDataElement.description === "Wind speed"
@@ -62,8 +78,7 @@ const WeatherDataElement = ({
         )}
       </div>
 
-      {weatherDataType === "current" &&
-      weatherDataElement.description === "Temperature" ? (
+      {setTemperatureUnit ? (
         <div
           className="weather-temperature-toggle-button"
           data-unit={temperatureUnit}

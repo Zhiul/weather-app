@@ -1,11 +1,35 @@
 @use "../../utils/sr-only.scss";
 
-.App[data-fetching-weather-data="true"] .weather-data-container-bg-placeholder {
-  transition: 50ms ease-in-out;
+.weather-data-container[data-fetching-weather-data="true"] {
+  .weather-data-container-bg-placeholder {
+    transition: 50ms ease-in-out;
+    opacity: 1;
+  }
+}
+
+.weather-data-container-bg-placeholder {
+  transition: 250ms ease-in-out;
   opacity: 1;
 }
 
-.App[data-fetching-weather-data="true"]
+.weather-data-container[data-fetching-weather-data="true"]
+  :where(
+    .weather-location-city,
+    .weather-location-state,
+    .weather-location-country,
+    .weather-time,
+    .weather-data-element-value
+  )
+  span {
+  opacity: 0;
+}
+
+.weather-time::before,
+.weather-time::after {
+  min-width: 150px;
+}
+
+.weather-data-container[data-fetching-weather-data="true"]
   :where(
     .weather-location-city,
     .weather-location-state,
@@ -13,8 +37,80 @@
     .weather-time,
     .weather-data-element-value
   ) {
-  opacity: 0;
   position: relative;
+}
+
+@keyframes skeletonScreenOpacityChange {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.weather-data-container[data-fetching-weather-data="true"]
+  :where(
+    .weather-location-city,
+    .weather-location-state,
+    .weather-location-country,
+    .weather-time,
+    .weather-data-element-value,
+    .weather-location
+  )::after,
+.weather-data-container[data-fetching-weather-data="true"]
+  :where(
+    .weather-location-city,
+    .weather-location-state,
+    .weather-location-country,
+    .weather-time,
+    .weather-data-element-value,
+    .weather-location
+  )::before {
+  content: "";
+  position: absolute;
+  background-color: #d9d9d9;
+  display: block;
+  width: 100%;
+  height: 0.75em;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px;
+}
+
+.weather-data-container[data-fetching-weather-data="true"]
+  :where(
+    .weather-location-city,
+    .weather-location-state,
+    .weather-location-country,
+    .weather-time,
+    .weather-data-element-value,
+    .weather-location
+  )::after {
+  background-color: #979797;
+  animation: skeletonScreenOpacityChange 600ms ease-in-out infinite alternate;
+}
+
+.weather-data-container[data-fetching-weather-data="true"] {
+  .weather-location::before,
+  .weather-location::after {
+    opacity: 0;
+  }
+
+  .weather-location::after {
+    animation: none;
+  }
+}
+
+.weather-location-city::before,
+.weather-location-city::after {
+  min-width: 120px;
+}
+
+.weather-location-country::before,
+.weather-location-country::after {
+  min-width: 80px;
 }
 
 .weather-data-container {
@@ -90,13 +186,19 @@
 
 .weather-location-country {
   font-size: 1rem;
-  padding-left: 0.3125rem;
   margin-bottom: 0.5rem;
+}
+
+.weather-location-country span {
+  padding-left: 0.3125rem;
 }
 
 .weather-time {
   font-size: 0.875rem;
-  padding-left: 5px;
+}
+
+.weather-time span {
+  padding-left: 0.3125rem;
 }
 
 .weather-data-elements-container {

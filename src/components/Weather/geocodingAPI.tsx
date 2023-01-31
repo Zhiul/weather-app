@@ -3,8 +3,12 @@ import ENLocale from "i18n-iso-countries/langs/en.json";
 import USAStates from "us-state-codes";
 countries.registerLocale(ENLocale);
 
-class Location {
-  [property: string]: string | object;
+class LocationData {
+  countryName: string;
+  stateName: string;
+  cityName: string;
+  lat: string;
+  lon: string;
 
   constructor(
     countryName: string,
@@ -21,11 +25,12 @@ class Location {
   }
 }
 
-export const geocodeLocation = async (locationInput: string) => {
+export const geocodeLocation = async (
+  locationInput: string
+): Promise<LocationData[]> => {
   const locationElements = locationInput
     .split(",")
     .map((locationElement) => locationElement.trim());
-  const locationElementsLength = locationElements.length;
 
   const cityName = locationElements[0];
   let stateName = "";
@@ -47,9 +52,9 @@ export const geocodeLocation = async (locationInput: string) => {
     let geocodedLocationData = await geocodedLocation.json();
 
     if (Array.isArray(geocodedLocationData)) {
-      geocodedLocationData = geocodedLocationData?.map(
+      geocodedLocationData = geocodedLocationData.map(
         (location) =>
-          new Location(
+          new LocationData(
             countries.getName(location.country, "en"),
             location.state,
             location.name,
@@ -63,12 +68,17 @@ export const geocodeLocation = async (locationInput: string) => {
 
     return geocodedLocationData;
   } catch (error) {
-    console.log(error);
-    return new Error("No internet access");
+    return [];
   }
 };
 
-export const reverseGeocodeLocation = async (lat, lon) => {
+export const reverseGeocodeLocation = async (
+  lat: string | number,
+  lon: string | number
+): Promise<LocationData> => {
+  if (typeof lat === "number") lat = lat.toString();
+  if (typeof lon === "number") lon = lon.toString();
+
   const reverseGeocodedLocation = await fetch(
     `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=7145fd9312e95eefabe5a13af2df5b20`
   );
@@ -81,6 +91,6 @@ export const reverseGeocodeLocation = async (lat, lon) => {
   const stateName = reverseGeocodedLocationData[0].state;
   const cityName = reverseGeocodedLocationData[0].name;
 
-  const location = new Location(countryName, stateName, cityName, lat, lon);
+  const location = new LocationData(countryName, stateName, cityName, lat, lon);
   return location;
 };

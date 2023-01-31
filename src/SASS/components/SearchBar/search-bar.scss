@@ -220,6 +220,21 @@
   }
 }
 
+.search-box-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-box-empty-state h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.search-box-empty-state img {
+  width: 150px;
+}
+
 @media only screen and (min-width: 768px) {
   .weather-search {
     max-width: 481px;

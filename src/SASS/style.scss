@@ -10,6 +10,39 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@keyframes offlineModalAppearing {
+  from {
+    transform: translateX(-50%) scale(0.75);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateX(-50%) scale(1);
+    opacity: 100%;
+  }
+}
+
+.offline-modal {
+  padding: 3px 8px;
+  position: fixed;
+  top: 92px;
+  background: white;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  box-shadow: 0px 0px 4px 2px black;
+  animation: offlineModalAppearing 400ms ease-in-out,
+    offlineModalAppearing 150ms ease-in-out 4.5s reverse forwards;
+}
+
+.offline-modal img {
+  width: 32px;
+}
+
 // Forecast
 
 .weather-basis-switch {

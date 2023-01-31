@@ -1,12 +1,7 @@
 {
   "currentData": {
     "time": "2023-01-26T08:00",
-    "weatherCode": {
-      "value": 2,
-      "description": "Partly cloudy",
-      "unit": "",
-      "icon": ""
-    },
+    "weatherCode": "",
     "temperature": {
       "value": "22",
       "description": "Temperature",
@@ -42,12 +37,7 @@
   "hourlyData": [
     {
       "time": "2023-01-26T09:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "25",
         "description": "Temperature",
@@ -83,12 +73,7 @@
     },
     {
       "time": "2023-01-26T10:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "27",
         "description": "Temperature",
@@ -124,12 +109,7 @@
     },
     {
       "time": "2023-01-26T11:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "29",
         "description": "Temperature",
@@ -165,12 +145,7 @@
     },
     {
       "time": "2023-01-26T12:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "30",
         "description": "Temperature",
@@ -206,12 +181,7 @@
     },
     {
       "time": "2023-01-26T13:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "30",
         "description": "Temperature",
@@ -247,12 +217,7 @@
     },
     {
       "time": "2023-01-26T14:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "30",
         "description": "Temperature",
@@ -288,12 +253,7 @@
     },
     {
       "time": "2023-01-26T15:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "30",
         "description": "Temperature",
@@ -329,12 +289,7 @@
     },
     {
       "time": "2023-01-26T16:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "29",
         "description": "Temperature",
@@ -370,12 +325,7 @@
     },
     {
       "time": "2023-01-26T17:00",
-      "weatherCode": {
-        "value": 1,
-        "description": "Mainly clear",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "28",
         "description": "Temperature",
@@ -411,12 +361,7 @@
     },
     {
       "time": "2023-01-26T18:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "27",
         "description": "Temperature",
@@ -452,12 +397,7 @@
     },
     {
       "time": "2023-01-26T19:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "26",
         "description": "Temperature",
@@ -493,12 +433,7 @@
     },
     {
       "time": "2023-01-26T20:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "26",
         "description": "Temperature",
@@ -534,12 +469,7 @@
     },
     {
       "time": "2023-01-26T21:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "26",
         "description": "Temperature",
@@ -575,12 +505,7 @@
     },
     {
       "time": "2023-01-26T22:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "25",
         "description": "Temperature",
@@ -616,12 +541,7 @@
     },
     {
       "time": "2023-01-26T23:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "24",
         "description": "Temperature",
@@ -657,12 +577,7 @@
     },
     {
       "time": "2023-01-27T00:00",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "24",
         "description": "Temperature",
@@ -698,12 +613,7 @@
     },
     {
       "time": "2023-01-27T01:00",
-      "weatherCode": {
-        "value": 1,
-        "description": "Mainly clear",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "23",
         "description": "Temperature",
@@ -739,12 +649,7 @@
     },
     {
       "time": "2023-01-27T02:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "22",
         "description": "Temperature",
@@ -780,12 +685,7 @@
     },
     {
       "time": "2023-01-27T03:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "22",
         "description": "Temperature",
@@ -821,12 +721,7 @@
     },
     {
       "time": "2023-01-27T04:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "21",
         "description": "Temperature",
@@ -862,12 +757,7 @@
     },
     {
       "time": "2023-01-27T05:00",
-      "weatherCode": {
-        "value": 45,
-        "description": "Fog",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "20",
         "description": "Temperature",
@@ -903,12 +793,7 @@
     },
     {
       "time": "2023-01-27T06:00",
-      "weatherCode": {
-        "value": 45,
-        "description": "Fog",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "19",
         "description": "Temperature",
@@ -944,12 +829,7 @@
     },
     {
       "time": "2023-01-27T07:00",
-      "weatherCode": {
-        "value": 45,
-        "description": "Fog",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "19",
         "description": "Temperature",
@@ -985,12 +865,7 @@
     },
     {
       "time": "2023-01-27T08:00",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
         "value": "22",
         "description": "Temperature",
@@ -1028,14 +903,12 @@
   "dailyData": [
     {
       "time": "2023-01-26",
-      "weatherCode": {
-        "value": 45,
-        "description": "Fog",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "20", "max": "30" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""
@@ -1071,14 +944,12 @@
     },
     {
       "time": "2023-01-27",
-      "weatherCode": {
-        "value": 45,
-        "description": "Fog",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "19", "max": "31" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""
@@ -1114,14 +985,12 @@
     },
     {
       "time": "2023-01-28",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "17", "max": "32" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""
@@ -1157,14 +1026,12 @@
     },
     {
       "time": "2023-01-29",
-      "weatherCode": {
-        "value": 45,
-        "description": "Fog",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "17", "max": "30" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""
@@ -1200,14 +1067,12 @@
     },
     {
       "time": "2023-01-30",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "19", "max": "31" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""
@@ -1243,14 +1108,12 @@
     },
     {
       "time": "2023-01-31",
-      "weatherCode": {
-        "value": 3,
-        "description": "Overcast",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "19", "max": "31" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""
@@ -1286,14 +1149,12 @@
     },
     {
       "time": "2023-02-01",
-      "weatherCode": {
-        "value": 2,
-        "description": "Partly cloudy",
-        "unit": "",
-        "icon": ""
-      },
+      "weatherCode": "",
       "temperature": {
-        "value": { "min": "18", "max": "32" },
+        "value": {
+          "min": "",
+          "max": ""
+        },
         "description": "Temperature",
         "unit": "°C",
         "icon": ""

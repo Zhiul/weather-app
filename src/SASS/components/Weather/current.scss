@@ -66,9 +66,57 @@
       width: 100%;
     }
 
+    .weather-location-city::before,
+    .weather-location-city::after {
+      min-width: 0px;
+    }
+
+    .weather-time::before,
+    .weather-time::after {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &[data-fetching-weather-data="true"]
+      :where(.weather-time, .weather-data-element-value)::after,
+    &[data-fetching-weather-data="true"]
+      :where(.weather-time, .weather-data-element-value)::before {
+      height: 0.55em;
+      border-radius: 100px;
+    }
+
+    &[data-fetching-weather-data="true"] {
+      .weather-location::before,
+      .weather-location::after {
+        opacity: 1;
+      }
+
+      .weather-location::after {
+        animation: skeletonScreenOpacityChange 600ms ease-in-out infinite
+          alternate;
+      }
+
+      :where(
+          .weather-location-city,
+          .weather-location-state,
+          .weather-location-country
+        )::after,
+      :where(
+          .weather-location-city,
+          .weather-location-state,
+          .weather-location-country
+        )::before {
+        opacity: 0;
+        animation: none;
+      }
+    }
+
     .weather-location {
       align-items: center;
+      justify-content: center;
       flex-direction: row;
+      position: relative;
+      min-width: 266px;
     }
 
     .weather-location-state {
