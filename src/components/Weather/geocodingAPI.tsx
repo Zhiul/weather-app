@@ -46,7 +46,7 @@ export const geocodeLocation = async (
 
   try {
     const geocodedLocation = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=5&appid=7145fd9312e95eefabe5a13af2df5b20`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=5&appid=7145fd9312e95eefabe5a13af2df5b20`
     );
 
     let geocodedLocationData = await geocodedLocation.json();
