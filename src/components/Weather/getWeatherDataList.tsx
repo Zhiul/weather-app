@@ -91,7 +91,8 @@ export const getWeatherDataList = async (
         const time = data.time[i];
         const weatherCode = data.weathercode[i].toString();
         const dayTime = DateTime.fromISO(time).startOf("day");
-        const daysDifference = dayTime.diff(currentTimeDay, "days").values.days;
+        const daysDifference = (dayTime.diff(currentTimeDay, "days") as any)
+          .values.days;
         const firstDayIndexInHourlyData = daysDifference * 24;
         const lastDayIndexInHourlyData = firstDayIndexInHourlyData + 23;
 

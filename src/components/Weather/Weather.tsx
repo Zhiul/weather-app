@@ -60,7 +60,7 @@ const Weather = ({
     const time = DateTime.fromISO(weatherData.time);
     const timeDay = time.startOf("day");
     const today = DateTime.fromISO(dailyWeatherData[0].time).startOf("day");
-    const timeIndex = timeDay.diff(today, "days").values.days;
+    const timeIndex = (timeDay.diff(today, "days") as any).values.days;
 
     const sunriseTime = DateTime.fromISO(dailyWeatherData[timeIndex].sunrise);
     const sunsetTime = DateTime.fromISO(dailyWeatherData[timeIndex].sunset);
